@@ -1,0 +1,16 @@
+ALGORITHM SortingCards
+VAR
+    T : ARRAY_OF INTEGER[];
+    i,j,n:INTEGER;
+BEGIN
+ 
+    FOR i FROM 0 TO T.length-1  DO
+        n := T[i];
+        j := i-1;
+        WHILE (j>=0 && n < T[j]) DO
+            T[j+1] := T[j];
+            j:=j-1;
+        END_WHILE
+         T[j+1] := n;
+    END_FOR
+END
